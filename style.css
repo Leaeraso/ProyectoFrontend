@@ -1,0 +1,412 @@
+/* GENERALES */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+}
+
+/* HEADER */
+.container_principalHeader {
+  width: 100vw;
+  height: 8vh;
+  background-color: #287abd;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.container_contentHeader {
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem;
+}
+
+.header_search {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1vh;
+}
+
+.inputHeader {
+  padding: 0.4rem;
+  border: none;
+  border-radius: 0.4rem;
+  outline: none;
+  height: 2vh;
+  width: 20vw;
+  font-size: 2vh;
+}
+
+.btn_search {
+  border: 1px solid #fff;
+  background-color: transparent;
+  border-radius: 0.4rem;
+  font-weight: bold;
+  padding: 0.4rem;
+  width: 10vw;
+  display: flex;
+  justify-content: center;
+  gap: 1vh;
+  align-items: center;
+  color: #fff;
+  transition: 0.4s ease;
+}
+
+.btn_search:hover {
+  background-color: #fff;
+  color: #287abd;
+  cursor: pointer;
+}
+
+.btn_add {
+  width: 20vw;
+  border-radius: 0.4rem;
+  padding: 0.4rem;
+  border: 1px solid #fff;
+  background-color: transparent;
+  font-weight: bold;
+  color: #fff;
+  transition: 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vh;
+}
+
+.btn_add:hover {
+  background-color: #fff;
+  color: #287abd;
+  cursor: pointer;
+}
+
+/* MAIN */
+
+.container_view {
+  display: grid;
+  grid-template-columns: 0.2fr 0.8fr;
+  height: 92vh;
+}
+
+.listAside {
+  height: 92vh;
+  background-color: #fff;
+}
+
+/* STORE */
+
+.store {
+  max-height: 92vh;
+  overflow-y: auto;
+  background-color: #eee;
+  padding: 1rem;
+}
+
+.section_store {
+  background-color: #fff;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.section_store h2 {
+  font-size: 3rem;
+  margin: 1rem;
+}
+
+.container_products {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2vh;
+}
+
+.product_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+  max-width: 300px;
+  margin: auto;
+  transition: 0.4s ease;
+}
+
+.product_card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.product_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.section_store img {
+  width: calc(100% - 1rem);
+  height: auto;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  margin-bottom: 0.7rem;
+}
+
+/* LISTASIDE */
+
+.listAside {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.listAside h2 {
+  margin-top: 2vh;
+  display: flex;
+  font-size: 3vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.listAside ul {
+  margin-top: 3vh;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1vh;
+}
+
+.listAside ul li {
+  font-size: 2vh;
+  font-weight: 500;
+  padding: 7px;
+}
+
+.listAside ul li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.liActive {
+  background-color: #287abd;
+  border-radius: 0.5rem;
+}
+
+#toggleButton {
+  cursor: pointer;
+}
+
+.categoryList.open {
+  display: none;
+  max-height: 300px;
+  transition: max-height 0.3s ease-in;
+}
+
+.material-symbols-outlined {
+  transition: transform 0.3s ease;
+}
+
+.material-symbols-outlined.rotated {
+  transform: rotate(180deg);
+}
+
+/* POPUP */
+
+.popUpContainer_principal {
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(4px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.popUpContainer {
+  width: 50vw;
+  height: 50vh;
+  background-color: #fff;
+  box-shadow: 0px 2px 18px rgba(0, 0, 0, 0.7);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.containerInputs_popUp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+  width: 100%;
+}
+
+.containerInputs_popUp input,
+select {
+  width: 60%;
+  border: 1px solid #287abd;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+}
+
+.containerTitle_popUp {
+  text-align: center;
+}
+
+.containerButtons_popUp {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn_popUp {
+  padding: 0.6rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 2vh;
+  cursor: pointer;
+}
+
+.cancel {
+  background-color: #e9ff22;
+}
+
+.accept {
+  background-color: #3cff00;
+}
+
+.delete {
+  background-color: #ff0000;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .section_store h2 {
+    font-size: 2.5rem;
+  }
+
+  .product_card {
+    width: calc(100% - 2rem);
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container_principalHeader {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .container_contentHeader {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .header_search {
+    margin: 0.5rem 0;
+  }
+
+  .inputHeader {
+    width: 30vw;
+    font-size: 1.5vh;
+  }
+
+  .btn_search {
+    width: 30vw;
+  }
+
+  .btn_add {
+    width: 50vw;
+    font-size: 1.5vh;
+    padding: 0.3rem;
+  }
+
+  .listAside {
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .listAside ul {
+    width: 100%;
+    align-items: center;
+  }
+
+  .listAside ul li {
+    font-size: 1.8vh;
+  }
+
+  .container_view {
+    grid-template-columns: 1fr;
+  }
+
+  .store {
+    padding: 0.5rem;
+  }
+
+  .section_store h2 {
+    font-size: 1.8rem;
+  }
+
+  .container_products {
+    grid-template-columns: 1fr;
+    gap: 1vh;
+  }
+
+  .product_card {
+    padding: 0.5rem;
+  }
+
+  .popUpContainer {
+    width: 80vw;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .containerInputs_popUp input,
+  select {
+    width: 80%;
+  }
+
+  .containerButtons_popUp {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .categoryList {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .listAside h2 {
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .listAside ul li {
+    font-size: 1.8vh;
+  }
+}
