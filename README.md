@@ -10,4 +10,4 @@
 
 3- Agregar productos
 
-# Video: 
+# Video: https://drive.google.com/file/d/1SsC3pBLIG3FXC1WzD1GP6z4Bd_O5FuDH/view?usp=drive_link
